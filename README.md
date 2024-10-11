@@ -3,7 +3,7 @@
 static-routing-mininet is a repository designed to help users learn about networking, from traditional static routing to programmable networks using the Mininet environment. The repository includes a script for setting up static routing between two routers (R1 and R2), demonstrating basic IP forwarding and routing principles.
 
 ## Requirements
-To get started, you'll need to install Mininet on your Ubuntu Linux server. Follow these steps to install Mininet:
+To get started, you'll need to install Mininet on your WSL. Follow these steps to install Mininet:
 
 1.  Clone the Mininet repository to your local machine :
 ```bash
