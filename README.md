@@ -35,7 +35,13 @@ classDef router fill:#ffa500, stroke:#000000;
 h1(H1):::host
 r1(((R1))):::router
 r2(((R2))):::router
-r3(((R3))):::router
 h2(H2):::host
+
+
+%%connectivity
+
+h1 -- 192.168.1.0/24 --- r1
+r1 -- 10.10.1.0/30 --- r2
+r2 -- 192.168.2.0/24 --- h2
 
 ```
