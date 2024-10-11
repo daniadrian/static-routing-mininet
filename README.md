@@ -24,34 +24,18 @@ This project demonstrates static routing between hosts and routers, visualized u
 ### Static Routing Topology
 
 ```mermaid
-graph TB
-    subgraph "Area 0 (Backbone)"
-        R1((R1))
-        R2((R2))
-        R3((R3))
-        R1 --- R2
-        R1 --- R3
-        R2 --- R3
-    end
-    
-    subgraph "Area 1"
-        R1 --- R1_1((R1_1))
-        R1 --- R1_2((R1_2))
-        R1_1 --- C1_1[C1_1]
-        R1_2 --- C1_2[C1_2]
-    end
-    
-    subgraph "Area 2"
-        R2 --- R2_1((R2_1))
-        R2 --- R2_2((R2_2))
-        R2_1 --- C2_1[C2_1]
-        R2_2 --- C2_2[C2_2]
-    end
-    
-    subgraph "Area 3"
-        R3 --- R3_1((R3_1))
-        R3 --- R3_2((R3_2))
-        R3_1 --- C3_1[C3_1]
-        R3_2 --- C3_2[C3_2]
-    end
+graph LR;
+%%Colors
+
+classDef host fill:#fffb05, stroke:#000000;
+classDef switch fill:#1fd655, stroke:#000000;
+classDef router fill:#ffa500, stroke:#000000;
+
+%%element
+h1(H1):::host
+r1(((R1))):::router
+r2(((R2))):::router
+r3(((R3))):::router
+h2(H2):::host
+
 ```
