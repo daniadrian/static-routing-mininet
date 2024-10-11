@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7581e536-db96-48f3-94a7-59abe2875cb6)# static-routing-mininet
+# static-routing-mininet
 
 static-routing-mininet is a repository designed to help users learn about networking, from traditional static routing to programmable networks using the Mininet environment. The repository includes a script for setting up static routing between two routers (R1 and R2), demonstrating basic IP forwarding and routing principles.
 
@@ -54,32 +54,4 @@ graph TB
         R3_1 --- C3_1[C3_1]
         R3_2 --- C3_2[C3_2]
     end
-```
-
-## ADDITIONAL CONFIGURATION !
-```bash
-sudo nano /etc/sysctl.conf
-net.ipv4.ip_forward=1
-net.ipv6.conf.all.forwarding=1
-```
-
-example results when running the ospf-lab.py :
-```bash
-========================================
-Warning: Linux bridge may not work with net.bridge.bridge-nf-call-arptables = 1
-Warning: Linux bridge may not work with net.bridge.bridge-nf-call-iptables = 1
-Warning: Linux bridge may not work with net.bridge.bridge-nf-call-ip6tables = 1
-Finished initializing network in: 1.1319239139556885 seconds
-```
-And, config this too :
-```bash
-ospf-lab$ sudo modprobe bridge
-sudo modprobe br_netfilter
-```
-
-The results will be like this :
-```bash
-bridge                335872  1 br_netfilter
-stp                    12288  1 bridge
-llc                    16384  2 bridge,stp
 ```
