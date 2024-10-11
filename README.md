@@ -1,4 +1,4 @@
-# static-routing-mininet
+![image](https://github.com/user-attachments/assets/7581e536-db96-48f3-94a7-59abe2875cb6)# static-routing-mininet
 
 static-routing-mininet is a repository designed to help users learn about networking, from traditional static routing to programmable networks using the Mininet environment. The repository includes a script for setting up static routing between two routers (R1 and R2), demonstrating basic IP forwarding and routing principles.
 
@@ -24,22 +24,62 @@ This project demonstrates static routing between hosts and routers, visualized u
 ### Static Routing Topology
 
 ```mermaid
-graph LR;
-%%Colors
-classDef host fill:#fffb05, stroke:#000000;
-classDef switch fill:#1fd655, stroke:#000000;
-classDef router fill:#ffa500, stroke:#000000;
-
-%%element
-h1(H1):::host
-r1(((R1))):::router
-r2(((R2))):::router
-h2(H2):::host
-
-%%connectivity
-h1 -- 192.168.1.0/24 --- r1
-r1 -- 10.10.1.0/30 --- r2
-r2 -- 192.168.2.0/24 --- h2
+graph TB
+    subgraph "Area 0 (Backbone)"
+        R1((R1))
+        R2((R2))
+        R3((R3))
+        R1 --- R2
+        R1 --- R3
+        R2 --- R3
+    end
+    
+    subgraph "Area 1"
+        R1 --- R1_1((R1_1))
+        R1 --- R1_2((R1_2))
+        R1_1 --- C1_1[C1_1]
+        R1_2 --- C1_2[C1_2]
+    end
+    
+    subgraph "Area 2"
+        R2 --- R2_1((R2_1))
+        R2 --- R2_2((R2_2))
+        R2_1 --- C2_1[C2_1]
+        R2_2 --- C2_2[C2_2]
+    end
+    
+    subgraph "Area 3"
+        R3 --- R3_1((R3_1))
+        R3 --- R3_2((R3_2))
+        R3_1 --- C3_1[C3_1]
+        R3_2 --- C3_2[C3_2]
+    end
 ```
 
+## ADDITIONAL CONFIGURATION !
+```bash
+sudo nano /etc/sysctl.conf
+net.ipv4.ip_forward=1
+net.ipv6.conf.all.forwarding=1
+```
 
+example results when running the ospf-lab.py :
+```bash
+========================================
+Warning: Linux bridge may not work with net.bridge.bridge-nf-call-arptables = 1
+Warning: Linux bridge may not work with net.bridge.bridge-nf-call-iptables = 1
+Warning: Linux bridge may not work with net.bridge.bridge-nf-call-ip6tables = 1
+Finished initializing network in: 1.1319239139556885 seconds
+```
+And, config this too :
+```bash
+ospf-lab$ sudo modprobe bridge
+sudo modprobe br_netfilter
+```
+
+The results will be like this :
+```bash
+bridge                335872  1 br_netfilter
+stp                    12288  1 bridge
+llc                    16384  2 bridge,stp
+```
