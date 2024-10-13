@@ -1,4 +1,4 @@
-# static-routing-mininet
+[Tugas Static Routing_225150201111009_DANI ADRIAN.pdf](https://github.com/user-attachments/files/17355935/Tugas.Static.Routing_225150201111009_DANI.ADRIAN.pdf)# static-routing-mininet
 `static-routing-mininet` is a repository designed to help users learn about networking, focusing on traditional static routing and programmable networks using the Mininet environment. This repository includes scripts and configurations for setting up static routing between two routers (R1 and R2), demonstrating fundamental IP forwarding and routing principles.
 
 ## Features
@@ -72,4 +72,6 @@ For any further questions or issues, feel free to open an issue on this reposito
 Let me know if you need any more adjustments or additions!
 
 
+# LAPORAN
 
+[Tugas Static Routing_225150201111009_DANI ADRIAN.pdf](https://github.com/user-attachments/files/17355936/Tugas.Static.Routing_225150201111009_DANI.ADRIAN.pdf)
