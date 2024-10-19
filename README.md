@@ -61,7 +61,7 @@ h2 -> r1 r2 h1
 Contributions to the static-routing-mininet repository are welcome! If you have suggestions for improvements, bug fixes, or additional features, please open an issue or submit a pull request.
 
 # Licencse
-This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the LICENSE file for details.
+This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
 
 # Acknowledgements
 - Mininet developers for creating an excellent platform for network simulation.
@@ -71,7 +71,8 @@ For any further questions or issues, feel free to open an issue on this reposito
 
 Let me know if you need any more adjustments or additions!
 
+## Project Report
 
-# LAPORAN
+For more detailed information on the project setup, configuration, and results, refer to the full report:
 
-[Tugas Static Routing_225150201111009_DANI ADRIAN.pdf](https://github.com/user-attachments/files/17355936/Tugas.Static.Routing_225150201111009_DANI.ADRIAN.pdf)
+[Static Routing.pdf](https://github.com/user-attachments/files/17355936/Tugas.Static.Routing_225150201111009_DANI.ADRIAN.pdf)
